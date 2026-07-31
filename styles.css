@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "Funnel Display";
+  src: url("assets/fonts/FunnelDisplay-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Creato Display";
+  src: url("assets/fonts/CreatoDisplay-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Creato Display";
+  src: url("assets/fonts/CreatoDisplay-RegularItalic.otf") format("opentype");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Creato Display";
+  src: url("assets/fonts/CreatoDisplay-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Creato Display";
+  src: url("assets/fonts/CreatoDisplay-BoldItalic.otf") format("opentype");
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("assets/fonts/GeistMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --bs-body-font-family: "Creato Display", sans-serif;
+}
+
+:is(h1, h2, h3, h4, h5, h6, .title, .sidebar-title, .sidebar-navigation a[href^="./"]) {
+  font-family: "Funnel Display", sans-serif;
+  font-weight: 600;
+}
+
+.sidebar-logo {
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 5px solid #000;
+  border-radius: 50%;
+}
+
+.sidebar-title::after {
+  content: "University of Bristol";
+  display: block;
+  margin-top: 0.15rem;
+  font-family: "Creato Display", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.sidebar-navigation a[href^="https://"] {
+  font-family: "Geist Mono", monospace;
+  font-size: 0.82rem;
+  letter-spacing: -0.02em;
+}
+
+.sidebar-navigation a[href^="https://"] .menu-text {
+  position: relative;
+  display: inline-block;
+  padding-left: 1.35rem;
+}
+
+.sidebar-navigation a[href^="https://"] .menu-text::before {
+  content: "";
+  position: absolute;
+  top: var(--logo-y, 0.12rem);
+  left: var(--logo-x, 0);
+  width: var(--logo-size, 0.9rem);
+  height: var(--logo-size, 0.9rem);
+  background: var(--link-logo) center / contain no-repeat;
+}
+
+.sidebar-navigation a[href^="https://"] .menu-text::after {
+  content: " ↗";
+}
+
+.sidebar-navigation li:has(a[href^="https://"]) {
+  margin-bottom: 0.4rem;
+}
+
+.sidebar-navigation li:has(a[href^="https://research-information.bris.ac.uk"]) {
+  margin-top: 0.9rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #000;
+}
+
+.sidebar-navigation a[href^="https://research-information.bris.ac.uk"] {
+  --link-logo: url("assets/images/logos/uob.png");
+  --logo-size: 1.05rem;
+  --logo-x: -0.075rem;
+  --logo-y: 0.04rem;
+}
+
+.sidebar-navigation a[href^="https://www.bristol.ac.uk/cdt/practice-oriented-ai/"] {
+  --link-logo: url("assets/images/logos/PrOAI.png");
+  --logo-size: 0.96rem;
+  --logo-x: -0.03rem;
+  --logo-y: 0.09rem;
+  font-size: 0.78rem;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+
+.sidebar-navigation a[href^="https://www.climatebristol.org/"] {
+  --link-logo: url("assets/images/logos/BCD.png");
+  --logo-size: 0.82rem;
+  --logo-x: 0.04rem;
+  --logo-y: 0.16rem;
+}
+
+.sidebar-navigation a[href^="https://github.com/"] {
+  --link-logo: url("assets/images/logos/GH.png");
+  --logo-size: 1.05rem;
+  --logo-x: -0.075rem;
+  --logo-y: 0.04rem;
+}
+
+@media (min-width: 992px) {
+  #quarto-sidebar {
+    position: relative;
+  }
+
+  #quarto-sidebar .sidebar-menu-container {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    left: 1rem;
+    transform: translateY(-50%);
+  }
+}
