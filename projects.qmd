@@ -1,8 +1,3 @@
 ---
-title: "AI-Related Projects"
-listing:
-    contents: projects
-    sort: date desc
+title: "Projects & Publications"
 ---
-
-Click on one of the headers below to find out about AI-related projects I am or have been involved in. 

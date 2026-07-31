@@ -1,1 +1,231 @@
-/* css styles */
+@font-face {
+  font-family: "Funnel Display";
+  src: url("assets/fonts/FunnelDisplay-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Creato Display";
+  src: url("assets/fonts/CreatoDisplay-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Creato Display";
+  src: url("assets/fonts/CreatoDisplay-RegularItalic.otf") format("opentype");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Creato Display";
+  src: url("assets/fonts/CreatoDisplay-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Creato Display";
+  src: url("assets/fonts/CreatoDisplay-BoldItalic.otf") format("opentype");
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("assets/fonts/GeistMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --bs-body-font-family: "Creato Display", sans-serif;
+}
+
+:is(h1, h2, h3, h4, h5, h6, .title, .sidebar-title, .sidebar-title a, .sidebar-navigation a.sidebar-link:not([target="_blank"])) {
+  font-family: "Funnel Display", sans-serif;
+  font-weight: 600;
+}
+
+.sidebar-logo {
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 3px solid #000;
+  border-radius: 50%;
+}
+
+#quarto-sidebar {
+  border-right: 3px solid #000 !important;
+}
+
+.sidebar-title::after {
+  content: "University of Bristol";
+  display: block;
+  margin-top: 0.15rem;
+  font-family: "Creato Display", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.sidebar-navigation a[target="_blank"] {
+  font-family: "Geist Mono", monospace;
+  font-size: 0.82rem;
+  letter-spacing: -0.02em;
+}
+
+.sidebar-navigation a[target="_blank"] .menu-text {
+  position: relative;
+  display: inline-block;
+  padding-left: 1.35rem;
+}
+
+.sidebar-navigation a[target="_blank"] .menu-text::before {
+  content: "";
+  position: absolute;
+  top: var(--logo-y, 0.12rem);
+  left: var(--logo-x, 0);
+  width: var(--logo-size, 0.9rem);
+  height: var(--logo-size, 0.9rem);
+  background: var(--link-logo) center / contain no-repeat;
+}
+
+.sidebar-navigation a[target="_blank"] .menu-text::after {
+  content: " ↗";
+}
+
+.sidebar-navigation li:has(a[target="_blank"]) {
+  margin-bottom: 0.4rem;
+}
+
+.sidebar-navigation li:has(a[href^="https://github.com/UoB-jack"]) {
+  margin-top: 0.9rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #000;
+}
+
+.sidebar-navigation a[href^="https://github.com/UoB-jack"] {
+  --link-logo: url("assets/images/logos/GH.png");
+  --logo-size: 1.05rem;
+  --logo-x: -0.075rem;
+  --logo-y: 0.04rem;
+}
+
+.sidebar-navigation a[href^="https://research-information.bris.ac.uk"] {
+  --link-logo: url("assets/images/logos/uob.png");
+  --logo-size: 0.75rem;
+  --logo-x: -0.075rem;
+  --logo-y: 0.04rem;
+}
+
+.sidebar-navigation a[href^="https://www.bristol.ac.uk/cdt/practice-oriented-ai/"] {
+  --link-logo: url("assets/images/logos/PrOAI.png");
+  --logo-size: 0.96rem;
+  --logo-x: -0.03rem;
+  --logo-y: 0.09rem;
+  font-size: 0.78rem;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+
+.sidebar-navigation a[href^="https://www.climatebristol.org/"] {
+  --link-logo: url("assets/images/logos/BCD.png");
+  --logo-size: 0.82rem;
+  --logo-x: 0.04rem;
+  --logo-y: 0.16rem;
+}
+
+@media (max-width: 991.98px) {
+  #quarto-header,
+  #quarto-header .quarto-secondary-nav,
+  #quarto-header .container-fluid {
+    height: 0;
+    min-height: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  #quarto-header .quarto-page-breadcrumbs,
+  #quarto-header .flex-grow-1 {
+    display: none;
+  }
+
+  #quarto-header .quarto-btn-toggle {
+    position: fixed;
+    top: calc(1rem + env(safe-area-inset-top));
+    left: 1.5rem;
+    z-index: 1050;
+    display: grid !important;
+    width: 2.8rem;
+    height: 1.8rem;
+    padding: 0;
+    place-items: center;
+    color: #000;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 999px;
+    box-shadow: none;
+  }
+
+  #quarto-header .quarto-btn-toggle i {
+    display: none;
+  }
+
+  #quarto-header .quarto-btn-toggle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.4rem;
+    height: 0.3rem;
+    background:
+      radial-gradient(circle at 0.15rem 50%, #000 0 0.15rem, transparent 0.16rem),
+      radial-gradient(circle at 50% 50%, #000 0 0.15rem, transparent 0.16rem),
+      radial-gradient(circle at calc(100% - 0.15rem) 50%, #000 0 0.15rem, transparent 0.16rem);
+    transform: translate(-50%, -50%);
+  }
+
+  #quarto-header .quarto-btn-toggle::after {
+    display: none;
+  }
+
+  #quarto-sidebar .sidebar-logo.light-content {
+    display: inline-block !important;
+    width: 10rem;
+    max-width: 60%;
+  }
+
+  #quarto-document-content {
+    padding-top: 4rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  #quarto-sidebar {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  #quarto-sidebar .sidebar-menu-container {
+    margin-top: clamp(2rem, 7vh, 4rem);
+    margin-bottom: auto;
+  }
+
+  body.about-page {
+    overflow-y: hidden;
+  }
+
+  body.about-page #quarto-document-content {
+    display: flex;
+    height: 100vh;
+    height: 100dvh;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+  }
+}

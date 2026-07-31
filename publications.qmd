@@ -1,9 +1,0 @@
----
-title: "My Publications"
-listing:
-    contents: publications
-    sort: date desc
----
-
-I have (co-)authored the following workshop, conference and journal papers. 
-Click through to find out more and see a full citation. 

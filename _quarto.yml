@@ -2,45 +2,39 @@ project:
   type: website
 
 website:
-  title: "A.N. Other's academic homepage (edit in _quarto.yml)"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - href: research.qmd
-        text: Research
-      - href: projects.qmd
-        text: Projects
-      - href: publications.qmd
-        text: Publications
-      - href: events.qmd
-        text: Events
-      - href: blog.qmd
-        text: Blog
+  title: "Jack Woodcock"
+  search: false
   sidebar:
     style: "docked"
-    logo: "./images/user_image.png"
-    search: true
+    title: "Jack Woodcock"
+    logo: "assets/images/profile.jpeg"
     collapse-level: 2
     contents:
-      - icon: github
-        text: Github
-        url: https://github.com/IntelligentSystemsLaboratory
-      - icon: twitter
-        text: Twitter
-        url: https://twitter.com/Bristol_AI_CDT
-      - icon: envelope
-        text: "Email"
-        url: mailto:ck22122@bristol.ac.uk
-      - text: "Google Scholar"
-        url: https://scholar.google.com/citations?user=<google-scholar-user>
-      - text: Pro-AI CDT
+      - href: index.qmd
+        text: About
+      - href: projects.qmd
+        text: Projects & Publications
+      - href: events.qmd
+        text: Events
+      - text: GitHub
+        url: https://github.com/UoB-jack
+        target: _blank
+        rel: noopener noreferrer
+      - text: Research profile
+        url: https://research-information.bris.ac.uk/en/persons/jack-woodcock/
+        target: _blank
+        rel: noopener noreferrer
+      - text: Practice-Oriented AI
         url: https://www.bristol.ac.uk/cdt/practice-oriented-ai/
+        target: _blank
+        rel: noopener noreferrer
+      - text: Bristol Climate Dynamics Group
+        url: https://www.climatebristol.org/
+        target: _blank
+        rel: noopener noreferrer
+
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
-
-
-
