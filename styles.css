@@ -97,15 +97,22 @@
   margin-bottom: 0.4rem;
 }
 
-.sidebar-navigation li:has(a[href^="https://research-information.bris.ac.uk"]) {
+.sidebar-navigation li:has(a[href^="https://github.com/UoB-jack"]) {
   margin-top: 0.9rem;
   padding-top: 1rem;
   border-top: 1px dashed #000;
 }
 
+.sidebar-navigation a[href^="https://github.com/UoB-jack"] {
+  --link-logo: url("assets/images/logos/GH.png");
+  --logo-size: 1.05rem;
+  --logo-x: -0.075rem;
+  --logo-y: 0.04rem;
+}
+
 .sidebar-navigation a[href^="https://research-information.bris.ac.uk"] {
   --link-logo: url("assets/images/logos/uob.png");
-  --logo-size: 1.05rem;
+  --logo-size: 0.75rem;
   --logo-x: -0.075rem;
   --logo-y: 0.04rem;
 }
@@ -125,13 +132,6 @@
   --logo-size: 0.82rem;
   --logo-x: 0.04rem;
   --logo-y: 0.16rem;
-}
-
-.sidebar-navigation a[href^="https://github.com/"] {
-  --link-logo: url("assets/images/logos/GH.png");
-  --logo-size: 1.05rem;
-  --logo-x: -0.075rem;
-  --logo-y: 0.04rem;
 }
 
 @media (min-width: 992px) {
