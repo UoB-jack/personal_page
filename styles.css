@@ -46,7 +46,7 @@
   --bs-body-font-family: "Creato Display", sans-serif;
 }
 
-:is(h1, h2, h3, h4, h5, h6, .title, .sidebar-title, .sidebar-navigation a[href^="./"]) {
+:is(h1, h2, h3, h4, h5, h6, .title, .sidebar-title, .sidebar-title a, .sidebar-navigation a.sidebar-link:not([target="_blank"])) {
   font-family: "Funnel Display", sans-serif;
   font-weight: 600;
 }
@@ -67,19 +67,19 @@
   font-weight: 400;
 }
 
-.sidebar-navigation a[href^="https://"] {
+.sidebar-navigation a[target="_blank"] {
   font-family: "Geist Mono", monospace;
   font-size: 0.82rem;
   letter-spacing: -0.02em;
 }
 
-.sidebar-navigation a[href^="https://"] .menu-text {
+.sidebar-navigation a[target="_blank"] .menu-text {
   position: relative;
   display: inline-block;
   padding-left: 1.35rem;
 }
 
-.sidebar-navigation a[href^="https://"] .menu-text::before {
+.sidebar-navigation a[target="_blank"] .menu-text::before {
   content: "";
   position: absolute;
   top: var(--logo-y, 0.12rem);
@@ -89,11 +89,11 @@
   background: var(--link-logo) center / contain no-repeat;
 }
 
-.sidebar-navigation a[href^="https://"] .menu-text::after {
+.sidebar-navigation a[target="_blank"] .menu-text::after {
   content: " ↗";
 }
 
-.sidebar-navigation li:has(a[href^="https://"]) {
+.sidebar-navigation li:has(a[target="_blank"]) {
   margin-bottom: 0.4rem;
 }
 
