@@ -1,3 +1,15 @@
 ---
 title: "About"
+toc: false
+body-classes: about-page
 ---
+
+I'm a PhD student at the University of Bristol, focusing on applications of machine learning in climate science. I'm part of the UKRI Centre for Doctoral Training in Practice-Oriented Artificial Intelligence and the Bristol Climate Dynamics Group.
+
+# Research
+
+My research focuses on machine-learning-based climate emulation. I have worked on evaluating an ML-based global atmospheric emulator and am currently developing a regional climate emulator.
+
+I am particularly interested in extreme weather because these events have substantial impacts and are often among the most challenging conditions for machine-learning emulators to represent.
+
+Machine-learning climate models are much more computationally efficient than traditional numerical climate models. This creates the potential to better characterise rare events by running thousands of climate simulations. However, whether these models can faithfully learn climate dynamics, especially for rare extremes, remains an open question that must be addressed before they can be used operationally.
